@@ -10,8 +10,9 @@ export interface Document {
     | 'PROCESSING'
     | 'KEYPOINT_UPDATE_POSSIBLE'
     | 'DEFAULT_DOCUMENT'
-  quizGenerationStatus: boolean
+  todayQuizIncluded: boolean
   createdAt: string
+  updatedAt: string
 }
 
 interface GetDocumentsForCategory extends NextFetchRequestConfig {

@@ -20,7 +20,7 @@ interface Props extends Document {
 }
 
 export default function DocumentItem({ sortOption, ...document }: Props) {
-  const { id, name, status, createdAt } = document
+  const { id, name, status, updatedAt } = document
 
   const [modifyDialogOpen, setModifyDialogOpen] = useState(false)
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
@@ -38,7 +38,7 @@ export default function DocumentItem({ sortOption, ...document }: Props) {
             </div>
             <div className="flex items-center gap-[8px] lg:gap-[48px]">
               <div className="whitespace-nowrap text-small1-regular text-gray-06 lg:text-body2-regular">
-                마지막 수정: {getRelativeTime(createdAt)}
+                마지막 수정: {getRelativeTime(updatedAt)}
               </div>
               <div className="flex justify-center lg:w-[93px]">
                 <div
